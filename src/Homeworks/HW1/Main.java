@@ -9,8 +9,7 @@ public class Main {
     int height = 172;
     int weight = 66;
 
-    System.out.println("Name = " + name);
-    System.out.println("Height = " + height);
-    System.out.println("Weight = " + weight);
+    System.out.println("Name = " + name + ", " + "Height = " + height + ", " + "Weight = " + weight );
+
     }
 }
