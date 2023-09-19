@@ -8,7 +8,6 @@ public class Part_2 {
         int c = 1;
         a = b;
         b = c;
-
         System.out.println("a = " + a + ", " + "b = " + b);
 
 

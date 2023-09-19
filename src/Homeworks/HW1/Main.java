@@ -8,6 +8,7 @@ public class Main {
     String name = "Viktoriia";
     int height = 172;
     int weight = 66;
+
     System.out.println("Name = " + name + ", " + "Height = " + height + ", " + "Weight = " + weight );
 
     }
