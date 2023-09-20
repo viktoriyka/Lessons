@@ -5,7 +5,6 @@ public class Part_3 {
 
         int a = 5;
         int b = 3;
-
         a = a + b;
         b = a - b;
         a = a - b;
