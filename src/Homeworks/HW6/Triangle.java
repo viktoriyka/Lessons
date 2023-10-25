@@ -24,18 +24,32 @@ public class Triangle extends Figure {
         this.angle = angle;
     }
 
-    public double area(int aSideLength, int bSideLength, int cSideLength){
+    private double area(int aSideLength, int bSideLength, int cSideLength){
         double semiP = (aSideLength + bSideLength + cSideLength) / 2;
         return Math.sqrt(semiP * (semiP - aSideLength) * (semiP - bSideLength) * (semiP - cSideLength));
     }
 
-    public double area(int aSideLength, int hLength){
+    private double area(int aSideLength, int hLength){
         return aSideLength * hLength * 0.5;
     }
-    public double area (int aSideLength, int bSideLength, double angle){
+
+    private double area (int aSideLength, int bSideLength, double angle){
         return 0.5 * aSideLength * bSideLength * Math.sin(angle);
     }
 
+
+    @Override
+    public double area() {
+        if (hLength != 0) {
+            return area(aSideLength,hLength);
+        }
+        else if (angle != 0) {
+            return area(aSideLength, bSideLength, angle);
+        }
+        else {
+            return area(aSideLength, bSideLength, cSideLength);
+        }
+    }
 
     public double perimeter(){
         return aSideLength + bSideLength + cSideLength;
