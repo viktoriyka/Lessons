@@ -8,17 +8,26 @@ public class Triangle extends Figure {
     private double angle;
 
     public Triangle(int aSideLength, int hLength) {
+        if (aSideLength <= 0 || hLength <= 0) {
+            throw new IllegalArgumentException("Сторона і висота повинні бути додатніми.");
+        }
         this.aSideLength = aSideLength;
         this.hLength = hLength;
     }
 
     public Triangle(int aSideLength, int bSideLength, int cSideLength) {
+        if (aSideLength <= 0 || bSideLength <= 0 || cSideLength <= 0) {
+            throw new IllegalArgumentException("Сторони повинні бути додатніми.");
+        }
         this.aSideLength = aSideLength;
         this.bSideLength = bSideLength;
         this.cSideLength = cSideLength;
     }
 
     public Triangle(int aSideLength, int bSideLength, double angle) {
+        if (aSideLength <= 0 || bSideLength <= 0 || angle <= 0) {
+            throw new IllegalArgumentException("Сторони і кут повинні бути додатніми.");
+        }
         this.aSideLength = aSideLength;
         this.bSideLength = bSideLength;
         this.angle = angle;
